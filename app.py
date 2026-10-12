@@ -6,7 +6,7 @@ import streamlit as st
 import pandas as pd
 import ollama
 st.set_page_config(
-    
+    client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
     page_title="AI Smart Quality System",
     page_icon="🔧",
     layout="wide"
