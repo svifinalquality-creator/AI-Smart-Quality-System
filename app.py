@@ -232,16 +232,12 @@ Total Rework Quantity: {total_rework}
 Defect-wise Rejection Quantity:
 {defect_summary.to_string()}
 """
-response = ollama.chat(
-    model="llama3.2",
-    options={
-        "num_predict":1000
-    },
-    messages=[
-                {
-                    "role": "user",
-                    "content": f"""
-You are a manufacturing quality engineer.
+response = client.responses.create(
+    model="gpt-5.6-luna",
+input=[
+    {
+        "role": "user",
+"content": f"""You are a manufacturing quality engineer.
 
 Analyze the following quality data:
 
@@ -273,7 +269,7 @@ Clearly label root causes as hypotheses unless confirmed by the provided data.
             ]
         )
 
-st.write(response["message"]["content"])
+st.write(response.output_text)
 
 pdf_file = "AI_Smart_Quality_Complete_Report.pdf"
 
