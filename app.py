@@ -10,10 +10,7 @@ st.set_page_config(
     page_icon="🔧",
     layout="wide"
 )
-    page_icon="🔧",
-    layout="wide"
-)
-from pathlib import Path
+ 
 
 with st.sidebar:
     st.title("🔧 Quality System")
