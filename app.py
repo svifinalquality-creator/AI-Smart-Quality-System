@@ -9,8 +9,7 @@ st.set_page_config(
     page_title="AI Smart Quality System",
     page_icon="🔧",
     layout="wide"
-client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
-    page_title="AI Smart Quality System",
+)
     page_icon="🔧",
     layout="wide"
 )
