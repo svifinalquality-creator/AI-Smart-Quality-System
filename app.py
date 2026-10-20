@@ -4,7 +4,6 @@ import pandas as pd
 
 from pathlib import Path
 
-client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 st.set_page_config(
     page_title="AI Smart Quality System",
